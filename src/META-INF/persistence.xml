@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="Quiz_appPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>BLL.Quiz</class>
+    <class>BLL.QuestionChoice</class>
+    <class>BLL.Questions</class>
+    <class>BLL.Results</class>
+    <class>BLL.Answer</class>
+    <class>BLL.Users</class>
+    <class>BLL.Categories</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=quiz_db"/>
+      <property name="javax.persistence.jdbc.user" value="DesktopUser"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="user123"/>
+    </properties>
+  </persistence-unit>
+</persistence>
